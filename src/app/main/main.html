@@ -1,0 +1,55 @@
+<tool-bar text="Dashboard"></tool-bar>
+<div id="main-content">
+  <md-button class="md-accent md-hue-2 md-rasied md-fab" style="padding-top: 5px; z-index: 2; position: fixed; right: 7vw;">
+    <md-tooltip>Bookshelf</md-tooltip>
+    <i class="fa fa-book fa-2x"></i>
+  </md-button>
+  <md-card class="md-whiteframe-5dp">
+    <md-card-header>
+      <md-card-avatar>
+        <img ng-src="{{ main.user.avatarUri }}" alt="User avatar" class="md-user-avatar" id="main__avatar">
+      </md-card-avatar>
+    <md-card-header-text>
+      <span class="md-title">Overview</span>
+      <span class="md-subhead">How you're doing</span>
+    </md-card-header-text>
+    </md-card-header>
+    <md-card-content layout-gt-sm="row" layout="column">
+      <div layout="column" class="main__chart-container" layout-align="space-around center">
+        <h2>Reading</h2>
+        <div class="ct-chart animated fadeInLeft" id="main__reading-chart"></div>
+      </div>
+      <span flex>
+      <div layout="column" class="main__chart-container" layout-align="space-around center">
+        <h2>Writing</h2>
+        <div class="ct-chart animated fadeInRight" id="main__writing-chart"></div>
+      </div>
+    </md-card-content>
+  </md-card>
+  <div layout-gt-sm="row" layout="column">
+  <md-card class="md-whiteframe-5dp main__recent">
+    <md-header>
+      <md-header-text><span class="md-title"><b>Recently reading</b></span></md-header-text>
+    </md-header>
+    <md-card-content>
+      <section>
+        <div id="main__reading-tree"></div>
+      </section>
+    </md-card-content>
+  </md-card>
+  <md-card class="md-whiteframe-5dp main__recent">
+    <md-header>
+      <md-header-text><span class="md-title"><b>Recently writing</b></span></md-header-text>
+    </md-header>
+    <md-card-content>
+      <section>
+        <div id="main__writing-tree"></div>
+      </section>
+    </md-card-content>
+  </md-card>
+  </div>
+  <div layout="row">
+    <md-button class="md-raised md-accent md-hue-3 main__button-library">My Bookshelf</md-button>
+    <md-button class="md-raised md-accent md-hue-3 main__button-library">My Creations</md-button>
+  </div>
+</div>

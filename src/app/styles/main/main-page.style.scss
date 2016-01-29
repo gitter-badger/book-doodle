@@ -1,0 +1,30 @@
+@import '../partials/mobile-query';
+$contentPadding: 80px;
+
+#main-content {
+  padding: 0px $contentPadding 0px $contentPadding;
+  @media #{$isMobile} {
+    padding: 0px 0px 0px 0px;
+  }
+}
+
+.main__recent {
+  padding: 20px 20px 20px 20px;
+  min-width: 48.5%;
+  @media #{$isMobile} {
+    min-width: 100%;
+  }
+
+  md-card-content section {
+    background: #f7f7f7;
+    border-radius: 3px;
+    position: relative !important;
+    div {
+      padding: 10px 10px 10px 10px;
+    }
+  }
+}
+
+.main__button-library {
+  width: 48.5%;
+}
