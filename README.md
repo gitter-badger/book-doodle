@@ -1,4 +1,4 @@
-# BookDoodle
+# BookDoodle [![Build Status](https://travis-ci.org/book-doodle/book-doodle.svg?branch=master)](https://travis-ci.org/book-doodle/book-doodle)
 
 Hi, hello, how d'you do?
 
