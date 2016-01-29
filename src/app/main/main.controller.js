@@ -1,10 +1,10 @@
 (function() {
   'use strict';
 
-    angular.module('bookDoodleApp') .controller('MainController', MainController);
+    angular.module('bookDoodleApp').controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController($log, $security, $mdMedia) {
+    function MainController($log, $security) {
       var vm = this;
       $log.debug("MainController instantiated.");
 
