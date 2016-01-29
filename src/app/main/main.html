@@ -1,6 +1,6 @@
 <tool-bar text="Dashboard"></tool-bar>
 <div id="main-content">
-  <md-button class="md-accent md-hue-2 md-rasied md-fab" style="padding-top: 5px; z-index: 2; position: fixed; right: 7vw;">
+  <md-button class="md-accent md-hue-2 md-rasied md-fab" id="main__fab-action">
     <md-tooltip>Bookshelf</md-tooltip>
     <i class="fa fa-book fa-2x"></i>
   </md-button>
@@ -17,12 +17,14 @@
     <md-card-content layout-gt-sm="row" layout="column">
       <div layout="column" class="main__chart-container" layout-align="space-around center">
         <h2>Reading</h2>
-        <div class="ct-chart animated fadeInLeft" id="main__reading-chart"></div>
+        <chartist class="ct-chart" type="Line"
+          data="main.readingData" options="main.opts" responsive-options="main.responsiveOpts"></chartist>
       </div>
       <span flex>
       <div layout="column" class="main__chart-container" layout-align="space-around center">
         <h2>Writing</h2>
-        <div class="ct-chart animated fadeInRight" id="main__writing-chart"></div>
+        <chartist class="ct-chart" type="Line"
+          data="main.writingData" options="main.opts" responsive-options="main.responsiveOpts"></chartist>
       </div>
     </md-card-content>
   </md-card>
@@ -33,7 +35,7 @@
     </md-header>
     <md-card-content>
       <section>
-        <div id="main__reading-tree"></div>
+        <div jq-tree="main.treeReadingOpts"></div>
       </section>
     </md-card-content>
   </md-card>
@@ -43,7 +45,7 @@
     </md-header>
     <md-card-content>
       <section>
-        <div id="main__writing-tree"></div>
+        <div jq-tree="main.treeWritingOpts"></div>
       </section>
     </md-card-content>
   </md-card>
