@@ -1,5 +1,7 @@
 # BookDoodle [![Build Status](https://travis-ci.org/book-doodle/book-doodle.svg?branch=master)](https://travis-ci.org/book-doodle/book-doodle)
 
+[![Join the chat at https://gitter.im/book-doodle/book-doodle](https://badges.gitter.im/book-doodle/book-doodle.svg)](https://gitter.im/book-doodle/book-doodle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 <a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
 
 Hi, hello, how d'you do?
