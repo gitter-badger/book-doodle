@@ -1,5 +1,7 @@
 # BookDoodle [![Build Status](https://travis-ci.org/book-doodle/book-doodle.svg?branch=master)](https://travis-ci.org/book-doodle/book-doodle)
 
+<a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
+
 Hi, hello, how d'you do?
 
 I'm Eshan Singh. And I am a teenager trying to make apps. 
