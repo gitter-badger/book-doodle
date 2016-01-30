@@ -212,7 +212,7 @@
 
           return recentBooks;
         },
-        getUserActivites: function(type) {
+        getUserActivities: function(type) {
           // Server call goes here
 
           var activtyLog = {
@@ -259,7 +259,7 @@
           else
             return (activityLog.reading).include(activityLog.writing);
         }
-      });
+      }).create();
       // }}}
     return {
       $get: function() {

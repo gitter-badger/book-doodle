@@ -8,11 +8,11 @@
       var vm = this;
       $log.debug("MainController instantiated.");
 
-      var user = $security.$user();
+      var user = $security.$user;
       vm.user = user.getCurrentUser();
 
-      var readingActivty = user.getUserActivites(ActivityType.READING);
-      var writingActivity = user.getUserActivites(ActivityType.WRITING);
+      var readingActivty = user.getUserActivities(ActivityType.READING);
+      var writingActivity = user.getUserActivities(ActivityType.WRITING);
 
       vm.readingData = {
         labels: readingActivty.map(function(n) {
@@ -48,7 +48,7 @@
         ]
       };
 
-      var recentWritingBooks = user.getRecentBooks().filter(function(n) {
+      vm.recentWritingBooks = user.getRecentBooks().filter(function(n) {
         return n.actionType === BookActionType.WRITING;
       }).map(function(n) {
         return {
@@ -57,7 +57,7 @@
           children: n.recentChapters
         };
       });
-      var recentReadingBooks = user.getRecentBooks().filter(function(n) {
+      vm.recentReadingBooks = user.getRecentBooks().filter(function(n) {
         return n.actionType === BookActionType.READING;
       }).map(function(n) {
         return {
@@ -67,7 +67,7 @@
         };
       });
       vm.treeReadingOpts = {
-        data: recentReadingBooks,
+        data: this.recentReadingBooks,
         autoOpen: false,
         dragAndDrop: false,
         autoEscape: false,
@@ -75,6 +75,6 @@
         openedIcon: '✍',
         selectable: false
       };
-      vm.treeWritingOpts = _.extend({ data: recentWritingBooks }, vm.treeReadingOpts);
+      vm.treeWritingOpts = _.extend({ data: this.recentWritingBooks }, vm.treeReadingOpts);
     }
 })();
